@@ -1,21 +1,8 @@
 <?php
-	$upload_max_filesize = ini_get("upload_max_filesize");
-	$post_max_size = ini_get("post_max_size");
-	$upload_max_filesize = str_replace( "k", "000", $upload_max_filesize );
-	$upload_max_filesize = str_replace( "M", "000000", $upload_max_filesize );
-	$post_max_size = str_replace( "k", "000", $post_max_size );
-	$post_max_size = str_replace( "M", "000000", $post_max_size );
-	
-	//Dimensione minima: 12MB
+
 	$alerts = '';
 	
-	if( $upload_max_filesize < 16000000 ){
-		$alerts .= "Devi modificare il tuo <b>php.ini</b> impostando <b>upload_max_filesize</b> almeno a 16MB altrimenti non riuscirai a caricare l&rsquo;aggiornamento.<br>";
-	}
-	
-	if( $post_max_size < 16000000 ){
-		$alerts .= "Devi modificare il tuo <b>php.ini</b> impostando <b>post_max_size</b> almeno a 16MB altrimenti non riuscirai a caricare l&rsquo;aggiornamento.<br>";
-	}
+
 	
 		$alerts .= "Ricorda che per importare una fattura, deve esistere un'anagrafica con il <b>codice univoco dell'ufficio corrispondente</b><br />";
 	
