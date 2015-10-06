@@ -29,4 +29,11 @@ Nel database lanciare le seguenti query
 	inserire
 	
 	"codice_ufficio=\"".$html_post['codice_ufficio']."\",".
+	
+Bug noti
+- la fattura successiva a quella importata può presentare il numeratore secondario "sballato", va corretto a mano. Purtroppo il formato del numero fattura sul file xml non è mai dello stesso tipofattura
+
+TODO
+- creare un installer che esegua le operazioni preliminari da solo
+- collegare le fatture importate ad un conto più adeguato di quello generico
 
